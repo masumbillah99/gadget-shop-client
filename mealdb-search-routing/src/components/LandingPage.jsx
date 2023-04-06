@@ -6,7 +6,7 @@ import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 
 const LandingPage = () => {
   return (
-    <section className="my-14 ml-5 grid lg:grid-cols-2 items-center justify-between">
+    <section className="container mx-auto my-14 grid lg:grid-cols-2 items-center justify-between">
       <div>
         <p className="font-bold">Hello!</p>
         <h1 className="text-2xl md:text-5xl font-bold py-5">
@@ -20,7 +20,7 @@ const LandingPage = () => {
           lean proteins, whole grains, and healthy fats. They are low in
           saturated and trans fats, added sugars, and sodium.
         </p>
-        <div className="mt-3 flex flex-col items-center md:flex-row gap-4">
+        <div className="mt-3 flex items-center gap-4">
           <Link to="/foods" className="btn">
             <div className="inline-flex me-2">Visit Store</div>
             <ShoppingCartIcon className="w-6" />

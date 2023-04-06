@@ -8,15 +8,17 @@ import Home from "./components/Home";
 import Orders from "./components/Orders";
 import Login from "./components/Login";
 import LandingPage from "./components/LandingPage";
+import ErrorPage from "./ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
-        element: <LandingPage />
+        element: <LandingPage />,
       },
       {
         path: "/foods",
