@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 
 const Food = ({ food }) => {
+
   const { strMealThumb, idMeal, strMeal, strCategory, strArea, strTags } = food;
 
   return (
@@ -15,8 +16,8 @@ const Food = ({ food }) => {
           {strCategory}, {strArea}
         </p>
         <p className="text-gray-500">{strTags}</p>
-        <Link to="/details">
-          <button className="btn mt-5">View Details</button>
+        <Link to={`/detail/${idMeal}`} className="">
+          <button className="btn mt-4">View Details</button>
         </Link>
       </div>
     </div>
