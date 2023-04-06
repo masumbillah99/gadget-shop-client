@@ -7,12 +7,17 @@ import Foods from "./components/Foods";
 import Home from "./components/Home";
 import Orders from "./components/Orders";
 import Login from "./components/Login";
+import LandingPage from "./components/LandingPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
     children: [
+      {
+        path: "/",
+        element: <LandingPage />
+      },
       {
         path: "/foods",
         element: <Foods />,

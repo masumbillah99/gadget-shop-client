@@ -5,8 +5,8 @@ import logo from "../assets/logo.png";
 
 const Header = () => {
   return (
-    <nav className="container mx-auto my-3 flex flex-col sm:items-center lg:items-start lg:flex-row justify-between">
-      <img className="w-1/12" src={logo} alt="" />
+    <nav className="container mx-auto my-3 flex flex-col items-center lg:items-start lg:flex-row justify-between shadow-lg rounded py-3 p-2 gap-3">
+      <img className="w-16" src={logo} alt="" />
 
       <ul className="flex flex-col items-center sm:mt-7 lg:flex-row text-lg font-semibold gap-5">
         <li>
