@@ -6,7 +6,7 @@ import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 
 const LandingPage = () => {
   return (
-    <section className="container mx-auto my-14 grid lg:grid-cols-2 items-center justify-between">
+    <section className="container mx-auto px-2 my-14 grid lg:grid-cols-2 items-center justify-between gap-10 md:gap-0">
       <div>
         <p className="font-bold">Hello!</p>
         <h1 className="text-2xl md:text-5xl font-bold py-5">

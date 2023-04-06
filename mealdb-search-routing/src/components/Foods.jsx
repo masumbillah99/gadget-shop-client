@@ -13,7 +13,7 @@ const Foods = () => {
 
   return (
     <div className="container mx-auto my-10">
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-2">
         {meals.map((food) => (
           <Food food={food} key={food.idMeal}></Food>
         ))}
