@@ -23,6 +23,8 @@ const router = createBrowserRouter([
       {
         path: "/foods",
         element: <Foods />,
+        loader: () =>
+          fetch("https://www.themealdb.com/api/json/v1/1/search.php?s"),
       },
       {
         path: "/orders",
