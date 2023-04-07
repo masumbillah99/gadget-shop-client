@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 11px;
+    margin-top: 70px;
 }
 
 .t-shirts-container {
@@ -10,11 +11,22 @@
     gap: 17px;
 }
 
+.cart-container {
+    border: 1px solid saddlebrown;
+    border-radius: 7px;
+    height: 57%;
+}
+
+
+/* responsive for mobile device */
 @media screen and (max-width: 992px) {
     .home-container {
         grid-template-columns: 4fr;
     }
     .t-shirts-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .cart-container {
+        height: auto;
     }
 }

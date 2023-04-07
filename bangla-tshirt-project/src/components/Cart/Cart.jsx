@@ -1,11 +1,24 @@
-import React from 'react';
+import React from "react";
+import "./Cart.css";
 
-const Cart = () => {
-    return (
-        <div>
-            <h2>Order Summary</h2>
+const Cart = ({ cart, handleRemoveFromCart }) => {
+  return (
+    <div className="cart-details">
+      <h2>Order Summary: {cart.length}</h2>
+      <hr />
+      {cart.map((tshirt) => (
+        <div key={tshirt._id}>
+          {tshirt.name}
+          <button onClick={() => handleRemoveFromCart(tshirt._id)}>X</button>
         </div>
-    );
+      ))}
+    </div>
+  );
 };
 
 export default Cart;
+
+
+/** 
+ * Conditional Rendering
+*/
