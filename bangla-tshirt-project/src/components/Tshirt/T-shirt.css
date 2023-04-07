@@ -1,0 +1,35 @@
+.t-shirts {
+    margin-top: 30px;
+    border: 1px solid lightblue;
+    border-radius: 9px;
+    padding: 11px;
+}
+
+.t-shirts img {
+    width: 250px;
+    height: 250px;
+    border-radius: 7px;
+}
+
+.t-shirts hr {
+    border: 1px solid linen;
+    border-radius: 5px;
+}
+
+.t-shirts-details p span {
+    font-weight: bold;
+}
+
+.t-shirts-details .buy-btn {
+    border: none;
+    border-radius: 5px;
+    background-color: lightgray;
+    padding: 11px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background-color: tomato;
+    color: white;
+}
