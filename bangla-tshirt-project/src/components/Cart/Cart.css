@@ -5,14 +5,37 @@
 .cart-details div{
     margin-bottom: 13px;
     font-size: 20px;
+    text-align: center;
 }
 
 .cart-details div button {
     margin-left: 5px;
-    padding: 2px 7px;
+    padding: 4px 7px;
     background-color: red;
     color: white;
     font-weight: bold;
     border: none;
     cursor: pointer;
+}
+
+.warn-msg {
+    color: red;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.plum {
+    background-color: plum;
+}
+
+.green {
+    background-color: green;
 }
