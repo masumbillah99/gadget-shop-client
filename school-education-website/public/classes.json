@@ -1,0 +1,65 @@
+{
+    "class1": {
+        "title": "Mathematics",
+        "description": "Learn the fundamentals of mathematics including algebra, geometry, trigonometry and calculus.",
+        "category": "STEM",
+        "views": 1200,
+        "image": "https://img.freepik.com/premium-vector/open-book-icons-mathematics_74440-842.jpg?w=826"
+    },
+    "class2": {
+        "title": "English Language Arts",
+        "description": "Improve your reading, writing, and communication skills through literature and writing assignments.",
+        "category": "Language Arts",
+        "views": 1000,
+        "image": "https://img.freepik.com/free-vector/hand-drawn-english-book-illustration_23-2149525066.jpg?w=826&t=st=1680983827~exp=1680984427~hmac=89ee885acf3d5d7a9f44934fc9045d71a62f8ca5ef0042b000c999209533bfbe"
+    },
+    "class3": {
+        "title": "World History",
+        "description": "Explore the major events, ideas, and movements that have shaped human history.",
+        "category": "Social Studies",
+        "views": 800,
+        "image": "https://img.freepik.com/free-vector/world-with-landmarks-flat-style_23-2147763357.jpg?w=826&t=st=1680983640~exp=1680984240~hmac=48829de104cc1e9cbd2cffcefecb57b11f53f1f36b5b10f1ff21c52436bae728"
+    },
+    "class4": {
+        "title": "Biology",
+        "description": "Study the living world from cells to ecosystems, including genetics and evolution.",
+        "category": "STEM",
+        "views": 600,
+        "image": "https://img.freepik.com/free-vector/science-retro-cartoon-set_1284-7505.jpg?w=826&t=st=1680983549~exp=1680984149~hmac=a1ddee80916459de7b88275a2c9a60beaf4287b201b45b8dbb0a68a691488e8e"
+    },
+    "class5": {
+        "title": "General Science",
+        "description": "Science is the most important for now days life. We are surrounded by science.",
+        "category": "General Science",
+        "views": 500,
+        "image": "https://img.freepik.com/free-vector/education-concept-with-learning-sketch-icons-realistic-light-bulb_1284-14041.jpg?w=826&t=st=1680983773~exp=1680984373~hmac=7eccc605bedb7403f592294441201fadf9b2e42d84b9aeab565b85567188ec44"
+    },
+    "class6": {
+        "title": "Physical Education",
+        "description": "Explore music theory and learn to play an instrument or sing in a choir.",
+        "category": "Fine Arts",
+        "views": 400,
+        "image": "https://img.freepik.com/free-vector/hand-drawn-physical-education-day-lettering_23-2149034048.jpg?w=1060&t=st=1680983954~exp=1680984554~hmac=052881b2777db5d9d259b2f6b70412572dc7bf9e6db2be145ae030676b57063a"
+    },
+    "class7": {
+        "title": "Computer Science",
+        "description": "Learn the basics of programming and develop computational thinking skills.",
+        "category": "STEM",
+        "views": 900,
+        "image": "https://img.freepik.com/free-vector/illustration-social-media-concept_53876-18139.jpg?w=1380&t=st=1680984068~exp=1680984668~hmac=84d50aaf2df24a1eab634cda07d8ea258f0badb1c39cdd8e076629cfbe11979a"
+    },
+    "class8": {
+        "title": "Bangla Language",
+        "description": "Learn to read, write, and speak Bangla, including grammar and vocabulary.",
+        "category": "World Languages",
+        "views": 700,
+        "image": "https://img.freepik.com/free-vector/flat-bangladesh-victory-day-background_23-2149183500.jpg?w=1380&t=st=1680983907~exp=1680984507~hmac=4399cd350c21c3564ab4ec84dd00529d55e3c1b557aaacbe431e4b6ee67d0abc"
+    },
+    "class9": {
+        "title": "Chemistry",
+        "description": "Study the properties, composition, and reactions of matter.",
+        "category": "STEM",
+        "views": 550,
+        "image": "https://img.freepik.com/free-photo/teamwork-dim-modern-lab_1098-18429.jpg?w=1380&t=st=1680983588~exp=1680984188~hmac=dd0c75f7242871c5e93849e63f7587bec35970c47f28c37f3b50b05e15dd6bcc"
+    }
+}
