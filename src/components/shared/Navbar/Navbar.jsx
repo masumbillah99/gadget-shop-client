@@ -114,7 +114,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-base-100 shadow-lg">
+    <nav className="bg-base-100 shadow-lg fixed w-full top-0">
       <div className="max-w-screen-xl mx-auto">
         <div className="navbar">
           <div className="navbar-start">
@@ -124,7 +124,7 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content uppercase mt-3 z-[1] p-2 shadow rounded-box w-52"
+                className="menu menu-sm dropdown-content bg-slate-200 uppercase mt-3 z-[1] p-2 shadow rounded-box w-52"
               >
                 {navItems}
               </ul>

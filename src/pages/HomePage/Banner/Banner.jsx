@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div className="max-w-screen-xl mx-auto my-10 w-full h-[500px] lg:h-[800px] bg-cover bg-center bg-slate-400 bg-blend-multiply bg-[url('https://media.istockphoto.com/id/1357530144/photo/young-family-having-fun-traveling-together.jpg?s=612x612&w=0&k=20&c=9n0yR3q7w4ReuTiNA1k8D4BOl7__ZJ9K4ixT4kNhYZ8=')]">
+    <div className="max-w-screen-xl mx-auto mt-16 lg:mt-24 mb-10 w-full h-[500px] md:h-[600px] lg:h-[800px] bg-cover bg-center bg-slate-400 bg-blend-multiply bg-[url('https://media.istockphoto.com/id/1357530144/photo/young-family-having-fun-traveling-together.jpg?s=612x612&w=0&k=20&c=9n0yR3q7w4ReuTiNA1k8D4BOl7__ZJ9K4ixT4kNhYZ8=')] lg:rounded-xl">
       {/* <figure className="bg-blend-overlay">
         <img className="w-full h-[600px]" src={banner1} alt="banner-img" />
       </figure> */}
