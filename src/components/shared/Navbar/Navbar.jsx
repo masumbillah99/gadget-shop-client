@@ -10,7 +10,7 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? "text-blue-700" : "text-gray-300"
+            isActive ? "text-blue-700" : "text-gray-500"
           }
         >
           Trips
@@ -22,7 +22,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "text-blue-700" : "text-gray-300"
+                isActive ? "text-blue-700" : "text-gray-500"
               }
             >
               About Aero
@@ -33,7 +33,7 @@ const Navbar = () => {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-700" : "text-gray-300"
+                  isActive ? "text-blue-700" : "text-gray-500"
                 }
               >
                 Home
@@ -41,9 +41,9 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/about"
+                to="/about-us"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-700" : "text-gray-300"
+                  isActive ? "text-blue-700" : "text-gray-500"
                 }
               >
                 About
@@ -51,9 +51,9 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/contact"
+                to="/contact-us"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-700" : "text-gray-300"
+                  isActive ? "text-blue-700" : "text-gray-500"
                 }
               >
                 Contact
@@ -66,7 +66,7 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? "text-blue-700" : "text-gray-300"
+            isActive ? "text-blue-700" : "text-gray-500"
           }
         >
           Your Aero Home
@@ -81,7 +81,7 @@ const Navbar = () => {
         <NavLink
           to="/dashboard"
           className={({ isActive }) =>
-            isActive ? "text-blue-700" : "text-gray-300"
+            isActive ? "text-blue-700" : "text-gray-500"
           }
         >
           Dashboard
@@ -91,7 +91,7 @@ const Navbar = () => {
         <NavLink
           to="/user-account"
           className={({ isActive }) =>
-            isActive ? "text-blue-700" : "text-gray-300"
+            isActive ? "text-blue-700" : "text-gray-500"
           }
         >
           Account
@@ -101,7 +101,7 @@ const Navbar = () => {
         <NavLink
           to="/help-center"
           className={({ isActive }) =>
-            isActive ? "text-blue-700" : "text-gray-300"
+            isActive ? "text-blue-700" : "text-gray-500"
           }
         >
           Help Center
@@ -114,7 +114,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-base-100 shadow-lg fixed w-full top-0">
+    <nav className="bg-white shadow-lg fixed w-full top-0 z-30">
       <div className="max-w-screen-xl mx-auto">
         <div className="navbar">
           {/* mobile view */}
