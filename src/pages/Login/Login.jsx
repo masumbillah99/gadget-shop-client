@@ -39,7 +39,7 @@ const Login = () => {
         </form>
         <div className="px-3">
           <p>
-            Already have an account? please login or sign in{" "}
+            New in TripAero? Create a free account{" "}
             <Link to="/sign-up" className="underline text-primary">
               Sign-up
             </Link>
