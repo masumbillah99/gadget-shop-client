@@ -8,7 +8,7 @@ const ErrorPage = () => {
   //   console.log(error);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen bg-base-200">
+    <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen bg-base-200 justify-items-center lg:justify-items-stretch">
       <div className="">
         <Lottie animationData={animationError} loop={true} />
       </div>

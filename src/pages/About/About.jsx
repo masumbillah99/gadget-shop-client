@@ -51,7 +51,7 @@ const About = () => {
       id: 7,
       question: "What payment methods are accepted on TripAero?",
       answer:
-        "ripAero accepts a variety of payment methods, including major credit cards, debit cards, ssl commerz, and secure online payment gateways. You can choose the payment option that suits you best when booking your travel experiences.",
+        "TripAero accepts a variety of payment methods, including major credit cards, debit cards, ssl commerz, and secure online payment gateways. You can choose the payment option that suits you best when booking your travel experiences.",
     },
   ];
 

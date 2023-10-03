@@ -18,16 +18,7 @@ const Navbar = () => {
       </li>
       <li tabIndex={0}>
         <details>
-          <summary>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? "text-blue-700" : "text-gray-500"
-              }
-            >
-              About Aero
-            </NavLink>
-          </summary>
+          <summary>About Aero</summary>
           <ul className="p-2">
             <li>
               <NavLink
@@ -71,6 +62,14 @@ const Navbar = () => {
         >
           Your Aero Home
         </NavLink>
+      </li>
+      <li>
+        <Link
+          to="/login"
+          className="btn btn-primary hover:bg-primary hover:text-white text-center pt-3 lg:pt-4 lg:mr-5 mt-2 lg:mt-0"
+        >
+          Login
+        </Link>
       </li>
     </>
   );
@@ -125,7 +124,7 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-slate-200 uppercase mt-3 z-[1] p-2 shadow rounded-box w-52"
+                className="menu menu-sm dropdown-content bg-white uppercase mt-3 z-[1] px-2 py-5 shadow rounded-box w-52"
               >
                 {navItems}
               </ul>

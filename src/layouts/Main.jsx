@@ -5,11 +5,11 @@ import Navbar from "../components/shared/Navbar/Navbar";
 const Main = () => {
   const location = useLocation();
   const loginLayout = location.pathname.includes("login");
-  const signUpLayout = location.pathname.includes("signUp");
+  const signUpLayout = location.pathname.includes("sign-up");
 
   return (
     <div className="">
-      {loginLayout || signUpLayout || <Navbar />}
+      <Navbar />
       <Outlet />
       {loginLayout || signUpLayout || <Footer />}
     </div>
