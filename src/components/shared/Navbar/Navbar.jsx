@@ -2,8 +2,12 @@ import { Link, NavLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import logo from "../../../assets/logo.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOutUser } = useContext(AuthContext);
+
   const navItems = (
     <>
       <li>
@@ -63,14 +67,13 @@ const Navbar = () => {
           Your Aero Home
         </NavLink>
       </li>
-      <li>
-        <Link
-          to="/login"
-          className="btn btn-primary hover:bg-primary hover:text-white text-center pt-3 lg:pt-4 lg:mr-5 mt-2 lg:mt-0"
-        >
-          Login
-        </Link>
-      </li>
+      {!user && (
+        <li>
+          <Link to="/login" className="text-primary font-bold">
+            Login
+          </Link>
+        </li>
+      )}
     </>
   );
 
@@ -106,9 +109,13 @@ const Navbar = () => {
           Help Center
         </NavLink>
       </li>
-      <li>
-        <button className="uppercase">Logout</button>
-      </li>
+      {user && (
+        <li>
+          <button onClick={logOutUser} className="btn btn-error py-3 w-3/4">
+            Logout
+          </button>
+        </li>
+      )}
     </>
   );
 
@@ -124,9 +131,10 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-white uppercase mt-3 z-[1] px-2 py-5 shadow rounded-box w-52"
+                className="menu menu-sm dropdown-content bg-white uppercase mt-3 z-[1] px-2 py-5 shadow rounded-box w-52 gap-3"
               >
                 {navItems}
+                {menuItems}
               </ul>
             </div>
             <Link
@@ -143,20 +151,26 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1 uppercase hover:rounded-xl">
               {navItems}
             </ul>
-            <div className="">
-              <div className="dropdown dropdown-end">
-                <label tabIndex={0} className="avatar cursor-pointer">
-                  <div className="">
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="avatar cursor-pointer">
+                <div className="">
+                  {user ? (
+                    <div className="avatar">
+                      <div className="w-12 rounded-full">
+                        <img src={user?.user_photo} />
+                      </div>
+                    </div>
+                  ) : (
                     <AccountCircleIcon sx={{ width: "40px", height: "40px" }} />
-                  </div>
-                </label>
-                <ul
-                  tabIndex={0}
-                  className="menu menu-sm uppercase dropdown-content mt-3 z-[1] p-2 shadow bg-slate-200 text-indigo-600 rounded-box w-52 gap-3"
-                >
-                  {menuItems}
-                </ul>
-              </div>
+                  )}
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm uppercase dropdown-content mt-3 z-[1] p-2 shadow bg-slate-200 text-indigo-600 rounded-box w-52 gap-3"
+              >
+                {menuItems}
+              </ul>
             </div>
           </div>
         </div>

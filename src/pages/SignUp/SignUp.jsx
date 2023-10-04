@@ -10,6 +10,7 @@ const SignUp = () => {
   const [error, setError] = useState("");
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -50,7 +51,7 @@ const SignUp = () => {
           if (result.insertedId) {
             toast.success("user sign up successfully");
             reset();
-            navigate("/");
+            navigate("/login");
           }
         })
         .catch((err) => console.log(err));
