@@ -9,11 +9,11 @@ const Home = () => {
             <Banner />
             <div className="container mx-auto">
                 <div className="my-10">
-                    <h1 className="text-2xl font-bold mb-6">Featured Products /&gt; </h1>
+                    <h1 className="text-2xl font-bold mb-6">Featured Products </h1>
                     <FeatureProducts />
                 </div>
                 <div className="my-10">
-                    <h1 className="text-2xl font-bold mb-6">FAQ /&gt; </h1>
+                    <h1 className="text-2xl font-bold mb-6">Frequently Asked Questions </h1>
                     <UserReview />
                 </div>
             </div>

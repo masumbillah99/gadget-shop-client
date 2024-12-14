@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -22,26 +22,52 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><NavLink to={'/'}>Home</NavLink></li>
-                        <li><NavLink to={'/products'}>Products</NavLink></li>
-                        <li><NavLink to={'/about'}>About</NavLink></li>
-                        <li><NavLink to={'/contact-us'}>Contact</NavLink></li>
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow font-semibold uppercase">
+                        <li>
+                            <NavLink to={'/'}>Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'/products'}>Products</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'/about'}>About</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'/contact-us'}>Contact</NavLink>
+                        </li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+
+                <NavLink to={'/'}><h4 className="logo-font">Gadget Store</h4></NavLink>
+
             </div>
-            <div className="navbar-center hidden lg:flex">
+
+            <div className="navbar-center hidden lg:flex uppercase font-semibold">
                 <ul className="menu menu-horizontal px-1">
-                    <li><NavLink to={'/'}>Home</NavLink></li>
-                    <li><NavLink to={'/products'}>Products</NavLink></li>
-                    <li><NavLink to={'/about'}>About</NavLink></li>
-                    <li><NavLink to={'/contact-us'}>Contact</NavLink></li>
+                    <li>
+                        <NavLink to={'/'}>Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={'/products'}>Products</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={'/about'}>About</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={'/contact-us'}>Contact</NavLink>
+                    </li>
                 </ul>
             </div>
+
             <div className="navbar-end">
-                <NavLink to={'/log-in'}>Login</NavLink>
-                <NavLink to={'/register'}>Register</NavLink>
+                <div className="flex items-center gap-4">
+                    <Link to={'/login'}>
+                        <button className="btn btn-primary px-5 uppercase">Login</button>
+                    </Link>
+                    <Link to={'/register'}>
+                        <button className="btn btn-outline btn-primary uppercase">Register</button>
+                    </Link>
+                </div>
             </div>
         </div>
     )
