@@ -1,16 +1,27 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import toast from "react-hot-toast";
 
 const Login = () => {
+    const { loginUser } = useAuth();
     const {
         register,
         handleSubmit,
         formState: { errors }
     } = useForm();
+    const navigate = useNavigate();
 
     const loginHandler = (data) => {
-        console.log(data);
-    }
+        const { email, password } = data;
+
+        loginUser(email, password)
+            .then(() => {
+                toast.success("user login successful");
+                navigate("/");
+            })
+            .catch((err) => toast.error(err?.message))
+    };
 
     return (
         <div className="hero min-h-screen">
