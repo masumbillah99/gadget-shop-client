@@ -1,7 +1,17 @@
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
-
 const Login = () => {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors }
+    } = useForm();
+
+    const loginHandler = (data) => {
+        console.log(data);
+    }
+
     return (
         <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse gap-28">
@@ -14,24 +24,55 @@ const Login = () => {
                 </div>
 
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form className="card-body" onSubmit={handleSubmit(loginHandler)}>
 
-                    <form className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="email" className="input input-bordered" required />
+                            <input
+                                type="email"
+                                placeholder="email"
+                                className="input input-bordered"
+                                {...register("email", { required: true })}
+                            />
+
+                            {errors?.email && (
+                                <p className="text-red-500 text-sm font-light">
+                                    Email is required
+                                </p>
+                            )}
                         </div>
 
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="password" className="input input-bordered" required />
+                            <input
+                                type="password"
+                                placeholder="password"
+                                className="input input-bordered"
+                                {...register("password", {
+                                    required: true,
+                                    minLength: 6,
+                                })}
+                            />
+
+                            {errors?.password?.type === "required" && (
+                                <p className="text-red-500 text-sm font-light">
+                                    Password is required
+                                </p>
+                            )}
+
+                            {errors?.password?.type === "minLength" && (
+                                <p className="text-red-500 text-sm font-light">
+                                    Password must have at least 6 characters
+                                </p>
+                            )}
                         </div>
 
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary uppercase">Login</button>
+                            <button type="submit" className="btn btn-primary uppercase">Login</button>
                         </div>
                     </form>
 
