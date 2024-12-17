@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import GoogleLogin from "../../components/reg-login/GoogleLogin";
 
 
 const Register = () => {
@@ -16,21 +17,22 @@ const Register = () => {
 
 
   const registerHandler = (data) => {
-    const { name, email, password } = data;
+    const { name, email, password, role } = data;
+    console.log(data);
 
-    createUser(email, password)
-      .then((result) => {
-        console.log(result);
-        if (result?.user) {
-          updateUserProfile(name, "").then(() => {
-            toast.success("user register successful");
-            navigate("/");
-          })
-        }
-      })
-      .catch((err) => {
-        toast.error(err?.message);
-      })
+    // createUser(email, password)
+    //   .then((result) => {
+    //     console.log(result);
+    //     if (result?.user) {
+    //       updateUserProfile(name, "").then(() => {
+    //         toast.success("user register successful");
+    //         navigate("/");
+    //       })
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     toast.error(err?.message);
+    //   })
 
   }
 
@@ -55,7 +57,7 @@ const Register = () => {
               <input
                 type="name"
                 placeholder="write your name"
-                className="input input-bordered"
+                className="input input-bordered focus:outline-none"
                 {...register("name", { required: true })}
               />
 
@@ -73,7 +75,7 @@ const Register = () => {
               <input
                 type="email"
                 placeholder="email"
-                className="input input-bordered"
+                className="input input-bordered focus:outline-none"
                 {...register("email", { required: true })}
               />
 
@@ -91,7 +93,7 @@ const Register = () => {
               <input
                 type="password"
                 placeholder="password"
-                className="input input-bordered"
+                className="input input-bordered focus:outline-none"
                 {...register("password", {
                   required: true,
                   minLength: 6,
@@ -118,7 +120,7 @@ const Register = () => {
               <input
                 type="password"
                 placeholder="confirm password"
-                className="input input-bordered"
+                className="input input-bordered focus:outline-none"
                 {...register("confirmPassword", {
                   required: true,
                   validate: (value) => {
@@ -136,12 +138,40 @@ const Register = () => {
               )}
             </div>
 
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Your Role</span>
+              </label>
+              <select className="select select-bordered focus:outline-none w-full max-w-xs"
+                {...register("role", { required: true })}
+              >
+                <option value={'buyer'}>Buyer</option>
+                <option value={'seller'}>Seller</option>
+              </select>
+
+              {errors?.role && (
+                <p className="text-red-500 text-sm font-light">
+                  You must select a role
+                </p>
+              )}
+            </div>
+
             <div className="form-control mt-6">
               <button type="submit" className="btn btn-primary uppercase">Register</button>
             </div>
-          </form>
 
-          <p className="ml-8 mb-6 text-sm font-light">Already have an account? <Link to={'/login'} className="hover:underline font-medium text-purple-700">Login</Link></p>
+            <GoogleLogin />
+
+            <p className="ml-8 mb-2 mt-3 text-sm font-medium">
+              Already have an account?
+              <Link
+                to={'/login'}
+                className="hover:underline font-medium text-purple-700 ml-1"
+              >
+                Login
+              </Link>
+            </p>
+          </form>
         </div>
       </div>
     </div>

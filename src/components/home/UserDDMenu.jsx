@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 
 const DropDown = () => {
     const { user, logoutUser } = useAuth();
+    // console.log(user);
 
     const logoutHandler = () => {
         logoutUser()
@@ -28,7 +29,7 @@ const DropDown = () => {
                 className="dropdown-content menu gap-4 bg-base-100 rounded-box z-[1] w-40 shadow font-bold"
             >
                 <li>
-                    <Link to={'/dashboard'}>Dashboard</Link>
+                    <Link to={'/dashboard'}  className="hover:bg-[#fff]">Dashboard</Link>
                 </li>
                 <li>
                     <button onClick={logoutHandler} className="btn btn-warning btn-sm py-1">Logout</button>

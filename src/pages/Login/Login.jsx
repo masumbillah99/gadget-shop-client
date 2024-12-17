@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
+import GoogleLogin from "../../components/reg-login/GoogleLogin";
 
 const Login = () => {
     const { loginUser } = useAuth();
@@ -85,9 +86,19 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button type="submit" className="btn btn-primary uppercase">Login</button>
                         </div>
+
+                        <GoogleLogin />
+                        <p className="ml-8 mb-2 mt-3 text-sm font-medium">
+                            New in Gadget Store?
+                            <Link to={'/register'}
+                                className="hover:underline font-medium text-purple-700 ml-1"
+                            >
+                                Register
+                            </Link>
+                        </p>
                     </form>
 
-                    <p className="ml-8 mb-6 text-sm font-light">New in Gadget Store? <Link to={'/register'} className="hover:underline font-medium text-purple-700">Register</Link></p>
+
                 </div>
             </div>
         </div>
